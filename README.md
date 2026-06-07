@@ -1,58 +1,45 @@
-# LinkedIn Post — FinSight AML Launch
+# The Laundromat — AML Detection Simulator
 
----
+> You have £1,000,000 in criminal proceeds. Can you clean it across three stages without triggering a Suspicious Activity Report to the NCA?
 
-**Option A — Story-led (recommended)**
+**Play it →** [your GitHub Pages link]
 
-I spent the last few weeks building something I wish existed when I was working on KYC/AML products.
+## What it is
 
-Introducing **FinSight AML** — an open-source, browser-based AML transaction intelligence dashboard.
+An interactive educational simulation of the three-stage money laundering process — Placement, Layering, Integration — with AML detection systems responding to each decision in real time.
 
-It simulates what compliance analysts actually see every day:
+Every scenario maps to documented typologies from FATF guidance, the NCA Annual SARs Report 2024 and the FCA Financial Crime Guide. Regulatory references are cited after every choice.
 
-→ A live transaction feed with real-time risk scoring
-→ An entity network graph showing customer-to-destination flows (drag the nodes)
-→ A case queue where you triage flagged transactions — file a SAR, mark false positive, or escalate
-→ Analytics: risk tier distribution and top flagged jurisdictions
+## How it works
 
-The scoring engine is built on real frameworks — JMLSG guidance, FATF high-risk jurisdictions, POCA 2002 typologies. Structuring detection. Crypto exposure flags. Round-number alerts. The stuff that actually matters in production AML systems.
+- **3 stages**, each with 3 choices at different risk levels
+- Each choice carries a **detection heat score** — visible before you commit
+- High-risk choices trigger real detection system responses (structuring alerts, MLRO escalations, SAR filings)
+- Accumulate enough heat → NCA alert fires, SAR is submitted, game ends
+- After each choice: **Compliance Insight** explains exactly how real AML systems would respond
 
-**Why I built it:**
-At Microkred Technologies, I owned the KYC/AML product stack for clients including SBM Bank and Lyra Network. At LV=, I worked on OrcA — a case management system for adviser operations. I kept thinking about how to show the intersection of those two worlds in something tangible.
+## Regulatory frameworks covered
 
-This is that thing.
+| Reference | Topic |
+|-----------|-------|
+| FATF Typology 7 | Smurfing / structured deposits |
+| JMLSG Guidance Part I Ch 4 | Cash-intensive business placement |
+| MLR 2017 Reg 37 | CTF threshold monitoring |
+| POCA 2002 s.327-330 | Criminal property offences |
+| POCA 2002 s.335-336 | NCA consent regime |
+| FATF Recommendation 16 | Travel Rule (crypto) |
+| Economic Crime Act 2022 | Register of Overseas Entities, UWOs |
+| NCA Annual SARs Report 2024 | 901,255 SARs filed in 2023-24 |
+| Law Society AML Guidance 2023 | Conveyancing Source of Funds |
 
-No backend. No build step. One HTML file. Open the GitHub link and it runs.
+## Tech
 
-🔗 [GitHub link] | Live demo: [GitHub Pages link]
+Vanilla HTML, CSS, JavaScript. No frameworks. No backend. No build step.
+Open the file — it runs.
 
-Happy to connect with anyone working in RegTech, financial crime compliance, or fintech product — this is the space I'm deeply invested in.
+## Author
 
-#AML #KYC #RegTech #Fintech #ProductManagement #FinancialCrime #OpenSource #JavaScript
+**Nikhil Shinde** — Product & Operations Analyst | KYC/AML Product Owner  
+[LinkedIn](https://linkedin.com/in/nikhil-shinde-55a0a210b) · [Portfolio](https://nikhil2617shinde.netlify.app)
 
----
-
-**Option B — Punchy / hook-first**
-
-Most job applications say "experience with AML systems."
-
-I built one instead.
-
-FinSight AML is a live transaction intelligence dashboard — risk scoring, entity network graph, case management, SAR filing workflow. All in the browser. All open source.
-
-Built on real compliance frameworks: JMLSG, FATF, POCA 2002.
-
-This is what 3 years across KYC/AML product ownership and financial services operations looks like when you put it in a GitHub repo.
-
-🔗 [link in comments]
-
-#AML #Fintech #RegTech #ProductManagement #KYC #OpenSource
-
----
-
-**Suggested first comment (for the link):**
-
-GitHub: [your-github-url]
-Live demo: [your-github-pages-url]
-
-Built with React, D3.js, and Chart.js — no backend, no build step, just open and run.
+Prior experience: KYC/AML product ownership at Microkred Technologies (Svatantra Microfinance, SBM Bank, Lyra Network, Relipay) · Product & Operations at LV=
